@@ -35,29 +35,29 @@ const randomCategory = categories[randomIndex];
   return (
     <div className="App flex flex-col items-center gap-24 p-10 w-full h-screen bg-gradient-to-tr from-primColor to-secColor">
       <div className="flex flex-col items-center">
-        <h1 className='satisfy-regular text-white text-5xl'>
+        <h1 className='satisfy-regular text-white text-2xl md:text-5xl'>
           calmquotes"
         </h1>
-        <p className='text-white text-sm'>
+        <p className='text-white text-[8px] md:text-sm'>
           -Find Peace in every Phrase-
         </p>
       </div>
       <div className='text-white flex flex-col items-center text-center w-auto px-10'>
-        <h1 className='courgette-regular text-6xl'>"</h1>
+        <h1 className='courgette-regular text-3xl md:text-6xl'>"</h1>
         {quote && (
           <div>
-            <p className='courgette-regular text-4xl'>
+            <p className='courgette-regular text-xl md:text-4xl'>
               {quote.quote}
             </p>
-            <p className='courgette-regular text-2xl'>-{quote.author}-</p>
+            <p className='courgette-regular text-md md:text-2xl'>-{quote.author}-</p>
           </div>
         )}
-        <button type='submit' onClick={getQuote} className='flex items-center justify-center mt-10 px-4 py-1 rounded-lg bg-white text-secColor font-semibold hover:bg-gray-200 duration-500'>
+        <button type='submit' onClick={getQuote} className='flex items-center justify-center mt-10 px-4 py-1 rounded-md md:rounded-lg bg-white text-secColor font-semibold hover:bg-gray-200 duration-500'>
           Show a quote
         </button>
       </div>
       <div className='fixed bottom-6'>
-        <h1 className='text-gray-200'>Made with ❤️ by Angelo Galope</h1>
+        <h1 className='text-gray-200 text-[8px] md:text-sm'>Made with ❤️ by Angelo Galope</h1>
       </div>
     </div>
   );
