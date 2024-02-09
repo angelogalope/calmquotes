@@ -47,7 +47,7 @@ function App() {
         </p>
       </div>
       <div className='text-white flex flex-col items-center text-center w-auto px-10'>
-        {quote && (
+        {quote ? (
           <div className='quote-container animate__animated animate__fadeIn'>
             <h1 className='courgette-regular text-3xl md:text-6xl'>"</h1>
             <p className='courgette-regular text-xl md:text-4xl'>
@@ -55,16 +55,20 @@ function App() {
             </p>
             <p className='courgette-regular text-md md:text-2xl'>-{quote.author}-</p>
           </div>
+        ) : (
+          <div style={{ visibility: buttonClicked ? "hidden" : "visible" }}>
+            <p className='courgette-regular text-xl md:text-3xl'>
+              -Click the button to show a quote-
+            </p>
+          </div>
         )}
-       {!quote && (
-          buttonClicked && (
-            <div>
+       {/* {!quote && (
+            <div style={{ visibility: quote ? "visible" : "hidden" }}>
               <p className='courgette-regular text-xl md:text-4xl'>
                 -Click the button to show a quote-
               </p>
             </div>
-          )
-        )}
+        )} */}
 
         <button type='submit' onClick={getQuote} className='flex items-center justify-center mt-10 px-4 py-1 rounded-md md:rounded-lg bg-white text-secColor font-semibold hover:bg-gray-200 duration-500'>
           Show a quote
