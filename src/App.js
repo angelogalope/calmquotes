@@ -15,15 +15,6 @@ function App() {
     }, 4000);
   }, []);
 
-  const categories = [
-    "age", "alone", "anger", "attitude", "beauty", "courage", 
-    "friendship", "education", "failure", "family", "fear",
-    "forgiveness", "future", "happiness", "jealousy", "morning", "success"
-  ];
-
-  const randomIndex = Math.floor(Math.random() * categories.length);
-  const randomCategory = categories[randomIndex];
-
   const getQuote = async () => {
     try {
       setQuote(null);
@@ -37,6 +28,7 @@ function App() {
   
       const result = await response.json();
       setQuote(result);
+      
     } catch (error) {
       console.error('Error fetching data:', error);
       alert("Error fetching data");
