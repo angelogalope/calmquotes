@@ -29,7 +29,7 @@ function App() {
       setQuote(null);
       setButtonClicked(true);
   
-      const response = await fetch('http://api.quotable.io/random');
+      const response = await fetch('https://api.quotable.io/random');
   
       if (!response.ok) {
         throw new Error('Failed to fetch data');
