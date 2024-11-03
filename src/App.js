@@ -47,7 +47,7 @@ function App() {
               calmquotes"
             </h1>
             <p className='text-white text-[8px] md:text-sm'>
-              -Find Peace in every Phrase-
+              -Find <span className='font-bold text-white'>Peace</span> in every <span className='font-bold text-white'>Phrase</span>-
             </p>
           </div>
           <div className='text-white flex flex-col items-center text-center w-auto px-10'>
@@ -62,7 +62,7 @@ function App() {
             ) : (
               <div className='' style={{ visibility: buttonClicked ? "hidden" : "visible" }}>
                 <p className='courgette-regular text-xl md:text-4xl'>
-                  -Click the button to show a quote-
+                  -Click the button for a quote-
                 </p>
               </div>
             )}
